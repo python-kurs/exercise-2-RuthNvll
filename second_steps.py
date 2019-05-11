@@ -22,7 +22,7 @@ print(sat_database.keys())
 # 3) Ask the user to enter the satellite name from which she/he would like to know the resolution [2P]
 
 answer = input ("Please name the satellite of which you want to know the resolution.")
-    
+
 if answer == "METEOSAT":
     print ("METEOSAT has a resolution of 3000 Meters.")
 elif answer == "LANDSAT":
@@ -36,12 +36,18 @@ elif answer == "worldview":
 else:
     print ("I can't find the satellite, you are searching for. Please check your spelling and note the case sensitivity. Also note that no spaces are allowed.")
         
-
 # 4) Check, if the satellite is in the database and inform the user, if it is not [2P]
+
+if answer in sat_database:
+    print ("The satellite is in the database.")
+else: 
+    print ("The satellite is not in the database.")
 
 #I checked the task with all Satellites. The Conditional Case works just fine.
 # Also I checked if an error message occurs if you missspell or enter Satellite names, that are not named in the Conditional Case.
 
-
 # 5) If the satellite name is in the database, print a meaningful message containing the satellite name and it's resolution [2P] 
-# I already did in Task 3. 
+#See task 3
+
+    
+    
